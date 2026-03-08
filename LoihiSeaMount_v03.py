@@ -1,7 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import thermo_core
 
-# 1.火山参数
+# 1.1火山参数
 GRID_SIZE = 100
 OCEAN_DEPTH = -4000.0
 MAGMA_TEMP = 1200.0
@@ -9,9 +10,15 @@ WATER_TEMP = 2.0
 TIME_STEPS = 500
 INJECTION_RATE = 15.0
 
+# 1.2热力学参数
+ALPHA = 1.0e-6  # 岩浆的热扩散率
+DT = 1.0    # 时间步长（秒）
+DX = 10.0   # 空间网格尺寸（米）
+SOLIDIFY_TEMP = 800.0   # 岩浆失去流动性的临界相变温度
+
 # 2. 内存空间分配：高度场与温度场
-elevation = np.full((GRID_SIZE, GRID_SIZE), OCEAN_DEPTH)
-temperature = np.full((GRID_SIZE,GRID_SIZE), WATER_TEMP)
+elevation = np.full((GRID_SIZE, GRID_SIZE), OCEAN_DEPTH, order = 'F')
+temperature = np.full((GRID_SIZE,GRID_SIZE), WATER_TEMP, order = 'F')
 center_x, center_y = GRID_SIZE // 2, GRID_SIZE // 2
 print("系统初始化完成，岩浆开始喷发...")
 
@@ -19,7 +26,14 @@ print("系统初始化完成，岩浆开始喷发...")
 for t in range(TIME_STEPS):
     elevation[center_x, center_y] += INJECTION_RATE
     temperature[center_x, center_y] = MAGMA_TEMP
+
+    # 跨语言调用：将温度场数据抛给Fortran进行极速热传导计算
+    # f2py会自动处理 Fortran 返回的 new_temp_grid
+    # temperature = thermo_core.thermo_module.solve_heat_conduction(temperature, GRID_SIZE, GRID_SIZE, ALPHA, DT, DX)
+    # f2py会自动提取参数，跨语言调用去掉nx,ny
+    temperature = thermo_core.thermo_module.solve_heat_conduction(temperature, ALPHA, DT, DX)
     center_view = elevation[1:-1, 1:-1]
+    temp_view = temperature[1:-1, 1:-1] #获取当前内部网格的温度视图
 
     north_view = elevation[:-2, 1:-1]
     south_view = elevation[2:, 1:-1]
@@ -31,9 +45,13 @@ for t in range(TIME_STEPS):
     mask_above_ocean = center_view > OCEAN_DEPTH
     mask_steep_drop = (center_view - neighbors_avg) > 20.0
 
-    active_mask = mask_above_ocean & mask_steep_drop
+    #新增物理限制：只有温度高于临界临界值的网格才能流动
+    mask_fluid_state = temp_view > SOLIDIFY_TEMP
 
-    flow_amount = (center_view - neighbors_avg)*0.1*actice_mask
+    #高度、深度与温度同时满足条件，岩浆才会发生位移
+    active_mask = mask_above_ocean & mask_steep_drop & mask_fluid_state
+
+    flow_amount = (center_view - neighbors_avg) * 0.1 * active_mask
 
     delta_elevation = np.zeros_like(elevation)
 
@@ -46,10 +64,11 @@ for t in range(TIME_STEPS):
 
     elevation += delta_elevation
 
-    print("阶段一喷发模拟结束，准备渲染...")
-
+    # print("阶段一喷发模拟结束，准备渲染...")
+    # 要取消缩进，和for循环平级
+print("阶段一喷发模拟结束，准备渲染...")
 # 4.终端渲染：深海探测器视觉
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(16, 12))
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
