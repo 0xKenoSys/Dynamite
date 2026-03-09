@@ -7,7 +7,7 @@ GRID_SIZE = 100
 OCEAN_DEPTH = -4000.0
 MAGMA_TEMP = 1200.0
 WATER_TEMP = 2.0
-TIME_STEPS = 500
+TIME_STEPS = 100000
 INJECTION_RATE = 15.0
 
 # 1.2热力学参数
@@ -63,12 +63,19 @@ for t in range(TIME_STEPS):
     delta_elevation[1:-1, 2:] += flow_amount
 
     elevation += delta_elevation
+    # 增加热平流补丁
+    temperature[:-2, 1:-1][flow_amount > 0] = MAGMA_TEMP
+    temperature[2:, 1:-1][flow_amount > 0] = MAGMA_TEMP
+    temperature[1:-1, :-2][flow_amount > 0] = MAGMA_TEMP
+    temperature[1:-1, 2:][flow_amount > 0] = MAGMA_TEMP
 
     # print("阶段一喷发模拟结束，准备渲染...")
     # 要取消缩进，和for循环平级
 print("阶段一喷发模拟结束，准备渲染...")
 # 4.终端渲染：深海探测器视觉
-plt.figure(figsize=(16, 12))
+plt.figure(figsize=(10, 8))
+
+# 下一阶段是什么？工程的目的是最优解、在纵深链路上走到头，走到高并发，而不是一天写二十个玩具项目
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
