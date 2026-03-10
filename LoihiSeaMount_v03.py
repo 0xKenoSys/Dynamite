@@ -76,6 +76,7 @@ print("阶段一喷发模拟结束，准备渲染...")
 plt.figure(figsize=(10, 8))
 
 # 下一阶段是什么？工程的目的是最优解、在纵深链路上走到头，走到高并发，而不是一天写二十个玩具项目
+# 确定Computer Systems的speciation
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
