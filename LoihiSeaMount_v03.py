@@ -77,6 +77,7 @@ plt.figure(figsize=(10, 8))
 
 # 下一阶段是什么？工程的目的是最优解、在纵深链路上走到头，走到高并发，而不是一天写二十个玩具项目
 # 确定Computer Systems的speciation
+# 我需要写一个弹窗，交互程序，问我此时心理淤积额能量是什么，如何解决，如何向内用逻辑理清，如何向外疏导能量。
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
