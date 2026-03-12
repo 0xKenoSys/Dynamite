@@ -7,7 +7,7 @@ GRID_SIZE = 100
 OCEAN_DEPTH = -4000.0
 MAGMA_TEMP = 1200.0
 WATER_TEMP = 2.0
-TIME_STEPS = 100000
+TIME_STEPS = 10000
 INJECTION_RATE = 15.0
 
 # 1.2热力学参数
@@ -78,6 +78,7 @@ plt.figure(figsize=(10, 8))
 # 下一阶段是什么？工程的目的是最优解、在纵深链路上走到头，走到高并发，而不是一天写二十个玩具项目
 # 确定Computer Systems的speciation
 # 我需要写一个弹窗，交互程序，问我此时心理淤积额能量是什么，如何解决，如何向内用逻辑理清，如何向外疏导能量。
+# 做点题
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
