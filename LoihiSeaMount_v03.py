@@ -79,6 +79,7 @@ plt.figure(figsize=(10, 8))
 # 确定Computer Systems的speciation
 # 我需要写一个弹窗，交互程序，问我此时心理淤积额能量是什么，如何解决，如何向内用逻辑理清，如何向外疏导能量。
 # 做点题
+# 一个小时能抄一节
 
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
