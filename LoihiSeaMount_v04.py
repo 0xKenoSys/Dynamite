@@ -90,6 +90,7 @@ for t in range(TIME_STEPS):
             print("水压骤减，海水沸腾，进入阶段二")
             current_phase = 2
         # 阶段二：蒸汽爆炸、火山口炸碎
+        # 阶段三：造岛
         # 1.岩浆流动不规则
         mask_fluid_state = temp_view > SOLIDIFY_TEMP
         flow_amount = (center_view - neighbors_avg) * 0.15 * mask_fluid_state
