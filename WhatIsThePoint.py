@@ -9,7 +9,7 @@ def main():
 
     # 将回答追加保存到同一目录下的txt文件
     with open("focus_log.txt", "a", encoding="utf-8") as file:
-        file.write(f"[{now}]{important_thing}\n")
+        file.write(f"[{now}] {important_thing}\n")
 
     print("\n已记录，去完成它吧！")
 
