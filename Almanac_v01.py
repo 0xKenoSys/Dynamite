@@ -28,3 +28,5 @@ def show_today_almanac():
     print("="*30)
 
 if __name__ == "__main__": show_today_almanac() # 这一行不能缩进到函数内部
+
+
