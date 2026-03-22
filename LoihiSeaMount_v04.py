@@ -170,3 +170,4 @@ plt.colorbar(label='Elevation(Meters relative to Sea Level)')
 plt.title('Kama‘ehuakanaloa (Lo‘ihi) Seamount - Island Phase')
 plt.contour(elevation, levels=20, colors='black', alpha=0.4) #添加等高线增强真实感
 plt.show()
+
