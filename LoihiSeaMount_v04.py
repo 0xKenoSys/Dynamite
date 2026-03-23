@@ -7,8 +7,8 @@ GRID_SIZE = 100
 OCEAN_DEPTH = -4000.0
 MAGMA_TEMP = 1200.0
 WATER_TEMP = 2.0
-TIME_STEPS = 10000
-INJECTION_RATE = 15.0
+TIME_STEPS = 80000
+INJECTION_RATE = 50.0   # INJECTION_RATE = 15.0的时候 出现了网格各向异性Grid Anisotropy
 SHALLOW_WATER_LIMIT = -200.0
 SEA_LEVEL = 0.0
 
@@ -23,6 +23,7 @@ elevation = np.full((GRID_SIZE, GRID_SIZE), OCEAN_DEPTH, order = 'F')
 temperature = np.full((GRID_SIZE,GRID_SIZE), WATER_TEMP, order = 'F')
 center_x, center_y = GRID_SIZE // 2, GRID_SIZE // 2
 print("系统初始化完成，岩浆开始喷发...")
+current_phase = 1 # 引入一个状态标记
 
 # 3.物理演化循环（仅保留时间维度）
 for t in range(TIME_STEPS):
@@ -61,6 +62,7 @@ for t in range(TIME_STEPS):
         active_mask = mask_above_ocean & mask_steep_drop & mask_fluid_state
 
         flow_amount = (center_view - neighbors_avg) * 0.1 * active_mask
+        flow_amount = np.maximum(0, center_view - neighbors_avg) * 0.1 * active_mask
 
         delta_elevation = np.zeros_like(elevation)
 
@@ -80,16 +82,24 @@ for t in range(TIME_STEPS):
 
         # print("阶段一喷发模拟结束，准备渲染...")
         # 要取消缩进，和for循环平级
-        print("阶段一喷发模拟结束，准备渲染...")
+        # print("阶段一喷发模拟结束，准备渲染...")
 
-    elif SHALLOW_WATER_LIMIT <= current_peak < sea_level:
+    elif SHALLOW_WATER_LIMIT <= current_peak < SEA_LEVEL:
+        # 状态切换检测：只有在状态切换的一瞬间，打印一次
+        if current_phase == 1:
+            print(f"TimeStep {t}:火山突破水下两百米！阶段一结束")
+            print("水压骤减，海水沸腾，进入阶段二")
+            current_phase = 2
         # 阶段二：蒸汽爆炸、火山口炸碎
+        # 阶段三：造岛
+        # 给Rust和Java配环境
         # 1.岩浆流动不规则
         mask_fluid_state = temp_view > SOLIDIFY_TEMP
         flow_amount = (center_view - neighbors_avg) * 0.15 * mask_fluid_state
+        flow_amount = np.maximum(0, center_view - neighbors_avg) * 0.15 * mask_fluid_state
         # 2.蒸汽爆炸。生成随机掩码
         explosion_probability = 0.05
-        explosion_mask = (np.random.ran(GRID_SIZE - 2, GRID_SIZE - 2) < explosion_probability)
+        explosion_mask = (np.random.rand(GRID_SIZE - 2, GRID_SIZE - 2) < explosion_probability)
 
         # 高于临界深度才会爆炸
         valid_explosion_zone = (center_view > SHALLOW_WATER_LIMIT) & explosion_mask
@@ -101,7 +111,7 @@ for t in range(TIME_STEPS):
         delta_elevation[1:-1, 1:-1] -= (flow_amount * 4 + blast_damage)
 
         # 炸碎的岩石随机散落
-        delta_elevation[:-2, 1:-1] -= flow_amount + (blast_damage * 0.25)
+        delta_elevation[:-2, 1:-1] += flow_amount + (blast_damage * 0.25)
         delta_elevation[2:, 1:-1] += flow_amount +(blast_damage * 0.25)
         delta_elevation[1:-1, :-2] += flow_amount + (blast_damage * 0.25)
         delta_elevation[1:-1, 2:] += flow_amount + (blast_damage * 0.25)
@@ -110,14 +120,41 @@ for t in range(TIME_STEPS):
 
         # 温度平流
         temperature[:-2, 1:-1][flow_amount > 0] = MAGMA_TEMP
-        temperature[2:, 1:-1][flow_amount > 0] = MAGMA_TWMP
+        temperature[2:, 1:-1][flow_amount > 0] = MAGMA_TEMP
         temperature[1:-1, :-2][flow_amount > 0] = MAGMA_TEMP
         temperature[1:-1, 2:][flow_amount > 0] = MAGMA_TEMP
 
     else:
-        # 阶段三：盾状造岛时期
-        print("二阶段喷发模拟结束，准备渲染...")
+        # 阶段三：盾状造岛时期（current_peak > SEA_LEVEL）
+        # 状态机：精准捕获破水瞬间
+        if current_phase == 2:
+            print(f"TimeStep{t}:火山冲破海面！阶段二结束。")
+            print("接触大气层，岩浆盾状摊开")
+            current_phase = 3
+        # 1)极低粘度，迅速扩散
+        mask_fluid_state = temp_view > SOLIDIFY_TEMP
+        # 2)将扩散系数（<0.25）推到数值稳定性的极限0.24
+        flow_amount = (center_view - neighbors_avg) * 0.20 * mask_fluid_state
+        flow_amount = np.maximum(0, center_view - neighbors_avg) * 0.15 * mask_fluid_state
+        # 3)高度更新
+        delta_elevation = np.zeros_like(elevation)
+        delta_elevation[1:-1, 1:-1] -= flow_amount * 4
 
+        delta_elevation[:-2, 1:-1] += flow_amount
+        delta_elevation[2:, 1:-1] += flow_amount
+        delta_elevation[1:-1, :-2] += flow_amount
+        delta_elevation[1:-1, 2:] += flow_amount
+
+        elevation += delta_elevation
+
+        # 4)温度平流补丁：
+        temperature[:-2, 1:-1][flow_amount > 0] = MAGMA_TEMP
+        temperature[2:, 1:-1][flow_amount > 0] = MAGMA_TEMP
+        temperature[1:-1, :-2][flow_amount > 0] = MAGMA_TEMP
+        temperature[1:-1, 2:][flow_amount > 0] = MAGMA_TEMP
+
+        # print("二阶段喷发模拟结束，准备渲染...")
+print("全部物理演算结束，准备渲染...")
 # 4.终端渲染：深海探测器视觉
 plt.figure(figsize=(10, 8))
 
@@ -130,6 +167,7 @@ plt.figure(figsize=(10, 8))
 #使用代表深海和岩石的色彩映射(colormap)
 plt.imshow(elevation, cmap='ocean', interpolation='bilinear')
 plt.colorbar(label='Elevation(Meters relative to Sea Level)')
-plt.title('Kama‘ehuakanaloa (Lo‘ihi) Seamount - Deep Sea Phase')
+plt.title('Kama‘ehuakanaloa (Lo‘ihi) Seamount - Island Phase')
 plt.contour(elevation, levels=20, colors='black', alpha=0.4) #添加等高线增强真实感
 plt.show()
+

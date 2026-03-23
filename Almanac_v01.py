@@ -31,3 +31,5 @@ def show_today_almanac():
     print(f"查询结果已保存至当前目录下的'{file_name}'文件中。")
 
 if __name__ == "__main__": show_today_almanac() # 这一行不能缩进到函数内部
+
+
