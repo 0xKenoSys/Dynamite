@@ -1,0 +1,207 @@
+[2026-02-04 15:46:30] --- SYSTEM START / 监控系统启动 ---
+[2026-02-04 15:50:36] --- SESSION START ---
+[2026-02-04 15:52:28] --- SESSION START ---
+[2026-02-04 16:01:37] --- SESSION START ---
+[2026-02-04 16:02:22] --- SESSION START ---
+[2026-02-04 16:04:07] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 16:04:38] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 16:04:51] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时00分13秒 | 累计: 00时00分13秒
+[2026-02-04 16:05:05] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 16:14:33] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 16:18:16] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 17:10:22] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时52分05秒 | 累计: 00时52分05秒
+[2026-02-04 17:10:22] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时55分48秒 | 累计: 00时55分48秒
+[2026-02-04 17:35:29] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 17:35:29] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 17:38:56] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 17:44:16] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时08分46秒 | 累计: 01时00分52秒
+[2026-02-04 17:44:16] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时05分19秒 | 累计: 00时05分19秒
+[2026-02-04 17:44:30] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 17:44:30] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 17:45:03] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 17:50:29] --- DUAL-CHANNEL MONITOR STARTED / 双通道监控已启动 ---
+[2026-02-04 18:28:25] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时43分21秒 | 累计: 00时43分21秒
+[2026-02-04 18:31:53] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 19:53:12] 🚀 SYSTEM START / 初始应用: PyCharm
+[2026-02-04 19:59:10] 🚀 SYSTEM START / 初始应用: PyCharm
+[2026-02-04 19:59:31] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 19:59:35] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 19:59:44] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 19:59:46] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 19:59:51] 📱 [FOCUS] Switched to: Safari浏览器
+[2026-02-04 19:59:54] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 20:04:39] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 20:04:52] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 20:04:57] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 20:05:07] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 20:10:10] 📱 [FOCUS] Switched to: Python
+[2026-02-04 20:10:37] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 20:11:44] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 20:11:49] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 20:13:27] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 20:13:40] 📱 [FOCUS] Switched to: Python
+[2026-02-04 20:14:09] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 20:14:21] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 20:14:24] 📱 [FOCUS] Switched to: Safari浏览器
+[2026-02-04 20:16:45] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 01时44分51秒 | 累计: 02时28分13秒
+[2026-02-04 20:16:45] 🔴 [STOP] Screen Locked (闭关) | 本次专注: 00时17分34秒
+[2026-02-04 20:16:45] 📱 [FOCUS] Switched to: loginwindow
+[2026-02-04 20:17:26] 📱 [FOCUS] Switched to: Safari浏览器
+[2026-02-04 20:17:26] 🟢 [START] Screen Unlocked (出关)
+[2026-02-04 20:17:26] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 20:17:36] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 20:18:06] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 20:19:14] 📱 [FOCUS] Switched to: Python
+[2026-02-04 20:19:17] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 20:19:31] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 20:21:54] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时04分28秒 | 累计: 02时32分41秒
+[2026-02-04 20:21:54] 🔴 [STOP] Screen Locked (闭关) | 本次专注: 00时04分28秒
+[2026-02-04 20:21:54] 📱 [FOCUS] Switched to: loginwindow
+[2026-02-04 22:16:29] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 22:16:29] 🟢 [START] Screen Unlocked (出关)
+[2026-02-04 22:16:29] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 22:16:36] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:16:39] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:17:23] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 22:17:27] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:17:30] 📱 [FOCUS] Switched to: CUH
+[2026-02-04 22:17:30] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:17:52] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:17:57] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 22:17:59] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:18:40] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 22:20:59] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:21:03] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:21:09] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:01] 🚀 SYSTEM START / 初始应用: 终端
+[2026-02-04 22:22:05] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:05] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:13] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:13] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:23] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:23] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:34] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:34] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:39] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:39] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 22:22:43] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:22:43] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:23:00] 📱 [FOCUS] Switched to: Python
+[2026-02-04 22:23:00] 📱 [FOCUS] Switched to: Python
+[2026-02-04 22:23:14] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:23:14] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:23:26] 📱 [FOCUS] Switched to: Python
+[2026-02-04 22:23:26] 📱 [FOCUS] Switched to: Python
+[2026-02-04 22:23:55] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:23:55] 📱 [FOCUS] Switched to: 终端
+[2026-02-04 22:24:02] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 22:24:02] 📱 [FOCUS] Switched to: PyCharm
+[2026-02-04 22:24:08] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:24:36] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:26:54] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:27:04] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:27:10] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:27:14] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:27:19] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:27:22] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:27:28] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:27:35] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:27:46] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:27:50] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:31:35] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:31:38] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:32:03] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:32:09] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:32:12] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:32:14] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:35:30] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:35:33] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:35:34] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:35:40] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:35:49] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:35:58] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:36:59] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:37:10] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:37:14] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:37:18] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:37:57] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:38:04] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:38:17] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:38:23] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:44:51] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 00时28分21秒 | 累计: 03时01分02秒
+[2026-02-04 22:44:51] 🔴 [STOP] Screen Locked (闭关) | 本次专注: 00时22分49秒
+[2026-02-04 22:44:51] 📱 [FOCUS] Switched to: loginwindow
+[2026-02-04 22:56:13] 🟢 [START] Screen Unlocked (出关)
+[2026-02-04 22:56:13] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-04 22:56:13] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:57:31] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:57:39] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:57:50] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:57:52] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:57:54] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:57:58] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:58:01] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:58:04] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 22:58:13] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 22:58:19] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:02:15] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 23:02:22] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:02:49] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 23:07:53] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:10:08] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:10:24] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:10:33] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:10:41] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 23:10:46] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:20:12] 📱 [FOCUS] Switched to: CUH
+[2026-02-04 23:20:13] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:22:29] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:22:33] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:25:08] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:26:45] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:28:44] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:28:51] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:28:56] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:28:59] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:29:12] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:29:37] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:30:07] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:30:10] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:38:18] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:38:28] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:40:52] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:41:04] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:42:15] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:42:19] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:44:35] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 23:44:41] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 23:44:44] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 23:44:51] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 23:44:51] 📱 [FOCUS] Switched to: 预览
+[2026-02-04 23:45:04] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 23:45:05] 📱 [FOCUS] Switched to: 预览
+[2026-02-04 23:46:43] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:46:51] 📱 [FOCUS] Switched to: 备忘录
+[2026-02-04 23:47:03] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:51:36] 📱 [FOCUS] Switched to: 访达
+[2026-02-04 23:52:09] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:55:10] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 23:55:35] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:55:43] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 23:55:55] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 23:56:12] 📱 [FOCUS] Switched to: CLion
+[2026-02-04 23:56:14] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 23:56:34] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 23:56:40] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 23:56:41] 📱 [FOCUS] Switched to: 截屏
+[2026-02-04 23:56:43] 📱 [FOCUS] Switched to: Google Chrome
+[2026-02-04 23:58:08] 📱 [FOCUS] Switched to: Astrill
+[2026-02-04 23:58:11] 📱 [FOCUS] Switched to: CLion
+[2026-02-05 00:02:06] 🔴 [STOP] Screen Locked (闭关) | 本次专注: 01时05分53秒
+[2026-02-05 00:02:06] 🛑 [STOP] Screen Locked (屏幕锁定) | 本段: 01时05分53秒 | 累计: 04时06分56秒
+[2026-02-05 00:02:06] 📱 [FOCUS] Switched to: loginwindow
+[2026-02-05 00:14:04] 🟢 [START] Screen Unlocked (屏幕解锁)
+[2026-02-05 00:14:04] 🟢 [START] Screen Unlocked (出关)
+[2026-02-05 00:14:04] 📱 [FOCUS] Switched to: CLion
+[2026-02-05 00:14:11] 📱 [FOCUS] Switched to: Astrill
+[2026-02-05 00:14:15] 📱 [FOCUS] Switched to: loginwindow
